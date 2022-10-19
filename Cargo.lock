@@ -433,6 +433,12 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "e245704f60eb4eb45810d65cf14eb54d2eb50a6f3715fe2d7cd01ee905c2944f"
 
 [[package]]
+name = "bytecount"
+version = "0.6.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2c676a478f63e9fa2dd5368a42f28bba0d6c560b775f38583c8bbaa7fcd67c9c"
+
+[[package]]
 name = "bytes"
 version = "1.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -991,7 +997,7 @@ version = "0.3.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7c5f0096a91d210159eceb2ff5e1c4da18388a170e1e3ce948aac9c8fdbbf595"
 dependencies = [
- "heck",
+ "heck 0.3.3",
  "proc-macro2",
  "quote",
  "syn",
@@ -1365,6 +1371,12 @@ checksum = "6d621efb26863f0e9924c6ac577e8275e5e6b77455db64ffa6c65c904e9e132c"
 dependencies = [
  "unicode-segmentation",
 ]
+
+[[package]]
+name = "heck"
+version = "0.4.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2540771e65fc8cb83cd6e8a237f70c319bd5c29f78ed1084ba5d50eeac86f7f9"
 
 [[package]]
 name = "hermit-abi"
@@ -2159,10 +2171,12 @@ dependencies = [
 
 [[package]]
 name = "papergrid"
-version = "0.2.0"
+version = "0.7.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "daff3d017ba874371c984a4eb5662e446362f13d11ee6bdb7fadbe1e3c223333"
+checksum = "1526bb6aa9f10ec339fb10360f22c57edf81d5678d0278e93bc12a47ffbe4b01"
 dependencies = [
+ "bytecount",
+ "fnv",
  "unicode-width",
 ]
 
@@ -3076,7 +3090,7 @@ version = "0.4.18"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "dcb5ae327f9cc13b68763b5749770cb9e048a99bd9dfdfa58d0cf05d5f64afe0"
 dependencies = [
- "heck",
+ "heck 0.3.3",
  "proc-macro-error",
  "proc-macro2",
  "quote",
@@ -3096,20 +3110,23 @@ dependencies = [
 
 [[package]]
 name = "tabled"
-version = "0.4.2"
+version = "0.10.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7a0dca82254bf1031c194833992b10c8a8148a8f4966ae2d3b0afdabcb1bb4c8"
+checksum = "56c3ee73732ffceaea7b8f6b719ce3bb17f253fa27461ffeaf568ebd0cdb4b85"
 dependencies = [
  "papergrid",
  "tabled_derive",
+ "unicode-width",
 ]
 
 [[package]]
 name = "tabled_derive"
-version = "0.2.0"
+version = "0.5.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a224735cbc8c30f06e52dc3891dc4b8eed07e5d4c8fb6f4cb6a839458e5a6465"
+checksum = "beca1b4eaceb4f2755df858b88d9b9315b7ccfd1ffd0d7a48a52602301f01a57"
 dependencies = [
+ "heck 0.4.0",
+ "proc-macro-error",
  "proc-macro2",
  "quote",
  "syn",
